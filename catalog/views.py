@@ -19,6 +19,9 @@ def index(request):
 
     # Books with t
     num_books_twilight = Book.objects.filter(title__contains='Twilight').count()
+    num_books_python = Book.objects.filter(title__contains='Python').count()
+
+    
     
     context = {
         'num_books': num_books,
